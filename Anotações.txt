@@ -1,0 +1,3 @@
+Template strings em JavaScript: use duas crases. As template strings servem
+para escrever uma string com as quebras de linha sem precisarmos de operadores
+de concatenação, o que é útil para escrevermos HTML.
