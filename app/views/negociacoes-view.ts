@@ -1,4 +1,10 @@
 export class NegociacoesView {
+
+    private elemento: HTMLElement;
+    constructor(selector: string) {
+        this.elemento = document.querySelector(selector);
+    }
+
     template(): string {
 
         return `
@@ -14,5 +20,9 @@ export class NegociacoesView {
                 </tbody>
             </table>
         `;
+    }
+
+    update(): void {
+        this.elemento.innerHTML = this.template();
     }
 }

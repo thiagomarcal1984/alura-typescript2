@@ -1,3 +1,8 @@
 Template strings em JavaScript: use duas crases. As template strings servem
 para escrever uma string com as quebras de linha sem precisarmos de operadores
 de concatenação, o que é útil para escrevermos HTML.
+
+Rode "npm install" para instalar as dependências de package.json.
+
+As views deste projeto vão ter 2 métodos: template (com o HTML) e update 
+(que vai atualizar o objeto DOM referenciado no HTML ao construir a view).
