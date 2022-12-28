@@ -6,7 +6,7 @@ export abstract class View<T> { // Abstract classes NÃO podem ser instanciadas.
         this.elemento = document.querySelector(seletor)
     }
 
-    update(model: T): void {
+    public update(model: T): void {
         const template = this.template(model);
         this.elemento.innerHTML = template;
     }

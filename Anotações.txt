@@ -72,3 +72,7 @@ Por padrão, a visibilidade dos métodos e das propriedades é pública. Para
 manter o encapsulamento, defina a visibilidade para private ou protected sempre
 que um método precisar de ser mais restrito. Se o nível de visibilidade não for
 declarado, a presunção é de que a visibilidade seja pública.
+
+Duas boas práticas:
+    1) Sempre defina a visibilidade dos métodos e propriedades.
+    2) Mostre os métodos nesta ordem: públicos, protegidos e privados.
