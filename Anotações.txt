@@ -6,3 +6,34 @@ Rode "npm install" para instalar as dependências de package.json.
 
 As views deste projeto vão ter 2 métodos: template (com o HTML) e update 
 (que vai atualizar o objeto DOM referenciado no HTML ao construir a view).
+
+O JavaScript permite a interpolação de strings (inserir placeholders em uma
+string para posterior substituição). A interpolação é feita inserindo ${code}:
+    template(model: Negociacoes): string {
+
+        return `
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>DATA</th>
+                        <th>QUANTIDADE</th>
+                        <th>VALOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${model.lista().map(negociacao => {
+                        return `
+                            <tr>
+                                <td>?</td>
+                                <td>${negociacao.quantidade}</td>
+                                <td>${negociacao.valor}</td>
+                            </tr>
+                        `;
+                    }).join('')} 
+                </tbody>
+            </table>
+        `;
+    }
+
+O método join depois de map serve para concatenar cada linha <tr> gerada pelo 
+método map com uma string (que no exemplo é vazia).
