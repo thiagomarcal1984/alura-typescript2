@@ -1,9 +1,12 @@
 export enum DiasDaSemana {
-    DOMINGO, // Escrito implicitamente: DOMINGO = 0;
-    SEGUNDA, // Escrito implicitamente: SEGUNDA = 1;
-    TERCA,   // Escrito implicitamente: TERCA   = 2;
-    QUARTA,  // Escrito implicitamente: QUARTA  = 3;
-    QUINTA,  // Escrito implicitamente: QUINTA  = 4;
-    SEXTA,   // Escrito implicitamente: SEXTA   = 5;
-    SABADO   // Escrito implicitamente: SABADO  = 6;
+    // Embora o TypeScript insira implicitamente os valores nas enums, 
+    // seja explícito nos valores, para que eles não sejam atribuídos
+    // em função da ordem da declaração.
+    DOMINGO = 0,
+    SEXTA   = 5,
+    SEGUNDA = 1,
+    TERCA   = 2,
+    QUARTA  = 3,
+    QUINTA  = 4,
+    SABADO  = 6
 }

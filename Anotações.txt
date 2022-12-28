@@ -79,3 +79,7 @@ Duas boas práticas:
 
 O método getDay de um objeto Date retorna o dia da semana, com base zero, 
 sendo que o dia zero é domingo e o dia 6 é sábado.
+
+Embora o TypeScript insira implicitamente os valores nas enums, seja 
+explícito nos valores, para que eles não sejam atribuídos em função 
+da ordem da declaração.
