@@ -53,3 +53,17 @@ Movemos os métodos template e update para a classe pai View. Mas isso dá erro
 de compilação, porque na classe MensagemView os parâmetros são string, enquanto
 na classe NegociacoesView os parâmetros são do tipo Negociacoes. A interface
 não está uniforme ainda.
+
+O Generics é uma forma de forçar o uso de certos tipos nos parâmetros e 
+retornos de método. Para usá-lo, use um diamante seguido do nome do tipo 
+na classe pai:
+    export class View<T> { 
+        ... 
+        update(model: T): void { ... }
+    }
+
+As classes filhas serão responsáveis por definir o tipo concreto: 
+    export NegociacoesView extends View<Negociacoes> { 
+        ... 
+        update(model: Negociacoes): void { ... }
+    }
