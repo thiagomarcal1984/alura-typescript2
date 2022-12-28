@@ -1,4 +1,4 @@
-export class View<T> {
+export abstract class View<T> { // Abstract classes NÃO podem ser instanciadas.
     // Propriedades protected são visíveis pelas filhas, igual ao Java.
     protected elemento: HTMLElement; 
 
@@ -11,7 +11,6 @@ export class View<T> {
         this.elemento.innerHTML = template;
     }
     
-    template(model: T): string {
-        throw Error('Classe filha precisa implementar o método template.');
-    }
+    // Forçar implementação do método em tempo de desenvolvimento/compilação.
+    abstract template(model: T): string; 
 }
