@@ -12,5 +12,5 @@ export abstract class View<T> { // Abstract classes NÃO podem ser instanciadas.
     }
     
     // Forçar implementação do método em tempo de desenvolvimento/compilação.
-    abstract template(model: T): string; 
+    protected abstract template(model: T): string; 
 }

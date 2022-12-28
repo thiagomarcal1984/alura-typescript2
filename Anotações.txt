@@ -67,3 +67,8 @@ As classes filhas serão responsáveis por definir o tipo concreto:
         ... 
         update(model: Negociacoes): void { ... }
     }
+
+Por padrão, a visibilidade dos métodos e das propriedades é pública. Para 
+manter o encapsulamento, defina a visibilidade para private ou protected sempre
+que um método precisar de ser mais restrito. Se o nível de visibilidade não for
+declarado, a presunção é de que a visibilidade seja pública.
