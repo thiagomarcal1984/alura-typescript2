@@ -22,9 +22,19 @@ export class NegociacoesView {
                     ${model.lista().map(negociacao => {
                         return `
                             <tr>
-                                <td>?</td>
-                                <td>${negociacao.quantidade}</td>
-                                <td>${negociacao.valor}</td>
+                                <td>
+                                    ${new Intl.DateTimeFormat()
+                                        .format(negociacao.data)}
+                                </td>
+                                <td>
+                                    ${negociacao.quantidade}
+                                </td>
+                                <td>
+                                    ${new Intl.NumberFormat('pt-br', {
+                                        style: 'currency',
+                                        currency: 'BRL'
+                                    }).format(negociacao.valor)}
+                                </td>
                             </tr>
                         `;
                     }).join('')} 

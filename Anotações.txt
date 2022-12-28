@@ -37,3 +37,14 @@ string para posterior substituição). A interpolação é feita inserindo ${cod
 
 O método join depois de map serve para concatenar cada linha <tr> gerada pelo 
 método map com uma string (que no exemplo é vazia).
+
+A classe Intl contém métodos para internacionalização. Ela tem uma subclasse
+chamada DateTimeFormat, que por padrão (construtor vazio) faz a formatação de 
+acordo com a localização do usuário. Construído o DateTimeFormat, invocamos o
+método format fornecendo como parâmetro a data que queremos formatar.
+
+Offtopic: Intl.NumberFormat é uma classe para formatação de números. Bom para 
+definir casas decimais. O primeiro parâmetro do constructor é locale: se ele 
+for setado como undefined, o locale padrão é usado (no caso, 'pt-br'). Se for
+definida a opção style currency no array do segundo parâmetro, 
+obrigatoriamente precisa colocar a opção currency com o código de 3 letras.
