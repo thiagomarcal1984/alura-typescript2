@@ -48,3 +48,8 @@ definir casas decimais. O primeiro parâmetro do constructor é locale: se ele
 for setado como undefined, o locale padrão é usado (no caso, 'pt-br'). Se for
 definida a opção style currency no array do segundo parâmetro, 
 obrigatoriamente precisa colocar a opção currency com o código de 3 letras.
+
+Movemos os métodos template e update para a classe pai View. Mas isso dá erro
+de compilação, porque na classe MensagemView os parâmetros são string, enquanto
+na classe NegociacoesView os parâmetros são do tipo Negociacoes. A interface
+não está uniforme ainda.
