@@ -87,3 +87,10 @@ da ordem da declaração.
 No TypeScript, métodos estáticos são acessíveis APENAS a partir da classe. É 
 diferente de outras linguagens, como Java, em que o método estático também é 
 acessível a partir da instância.
+
+Exemplo de uso de expressões regulares no console do browser: 
+    i:=> exp = /<script>[\s\S]*?<\/script>/
+    i:=> "<script>alert('oi')</script>".replace(exp, 'Bla')
+    o:=> 'Bla'
+    i:=> "Antes. <script>alert('XP')</script>Depois.".replace(exp, '')
+    o:=> 'Antes. Depois.'
