@@ -127,5 +127,6 @@ Formas de tratar Union Types que retornem nulo, após ligar o strictNullChecks:
     2) fazer um cast explícito nos métodos que retornem o tipo null:
         this.inputValor = document.querySelector('#valor') as HTMLInputElement;
         this.inputValor = <HTMLInputElement>document.querySelector('#valor');
+    3) Envolvendo objetos Union Types nullable em um if/else.
 
-Os arquivos app/app.ts e app/views/view.ts estarão quebrados no fim desta aula.
+O arquivo app/views/view.ts estará quebrado no fim desta aula.
