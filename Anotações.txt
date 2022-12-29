@@ -83,3 +83,7 @@ sendo que o dia zero é domingo e o dia 6 é sábado.
 Embora o TypeScript insira implicitamente os valores nas enums, seja 
 explícito nos valores, para que eles não sejam atribuídos em função 
 da ordem da declaração.
+
+No TypeScript, métodos estáticos são acessíveis APENAS a partir da classe. É 
+diferente de outras linguagens, como Java, em que o método estático também é 
+acessível a partir da instância.
