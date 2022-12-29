@@ -104,3 +104,18 @@ Os parâmetros obrigatórios não podem ser declarados depois dos opcionais.
 
 Parâmetros adicionais para o tsconfig.json:
     removeComments: os js são gerados sem os comentários que estão nos fontes.
+    strictNullChecks: impede atribuição de Union Types que podem ser nulos.
+
+TypeScript possui um recurso de Union Types: uma variávei pode ser de vários 
+tipos diferentes:
+    const x: string | number | boolean = "String";
+    const x: string | number | boolean = 10;
+    const x: string | number | boolean = false;
+
+O pipe (|) é um operador de união. Assim, a constante x pode receber 
+qualquer um dos 3 valores.
+
+Acontece que o método querySelector retorna um Union Type: ou HTMLInputElement
+ou um nulo. Por padrão, o método querySelector remove a checagem de nulo.
+
+Com o strictNullChecks = true, o código atual vai quebrar.
