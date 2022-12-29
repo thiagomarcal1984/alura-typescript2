@@ -94,3 +94,10 @@ Exemplo de uso de expressões regulares no console do browser:
     o:=> 'Bla'
     i:=> "Antes. <script>alert('XP')</script>Depois.".replace(exp, '')
     o:=> 'Antes. Depois.'
+
+Se um parâmetro opcional não receber valor, o valor padrão é undefined (que 
+pode ser lido como false em um teste):
+    i:=> undefined ? 'Sim' : 'Não'
+    o:=> 'Não'
+
+Os parâmetros obrigatórios não podem ser declarados depois dos opcionais.
