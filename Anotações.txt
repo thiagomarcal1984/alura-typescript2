@@ -101,3 +101,6 @@ pode ser lido como false em um teste):
     o:=> 'Não'
 
 Os parâmetros obrigatórios não podem ser declarados depois dos opcionais.
+
+Parâmetros adicionais para o tsconfig.json:
+    removeComments: os js são gerados sem os comentários que estão nos fontes.
