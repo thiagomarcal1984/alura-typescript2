@@ -4,7 +4,14 @@ export abstract class View<T> { // Abstract classes NÃO podem ser instanciadas.
     private escapar = false;
 
     constructor(seletor: string, escapar?: boolean) {
-        this.elemento = document.querySelector(seletor)
+        // A constante recebe um objeto Element (ou mesmo null).
+        const elemento = document.querySelector(seletor);
+        if (elemento) {
+            // Se o elemento não for nulo, força o cast para HTMLElement.
+            this.elemento = elemento as HTMLElement;
+        } else {
+            throw Error(`Seletor ${seletor} não existe no DOM. Verifique.`);
+        }
         if (escapar) {
             this.escapar = escapar;
         }
